@@ -1,0 +1,21 @@
+{
+  "money": 100,
+
+  "items": [
+    {
+      "name"  : "apple",
+      "amount": 3,
+      "price" : 5
+    },
+    {
+      "name"  : "orange",
+      "amount": 1,
+      "price" : 10
+    },
+    {
+      "name"  : "banana",
+      "amount": 0,
+      "price" : 3
+    }
+  ]
+}
