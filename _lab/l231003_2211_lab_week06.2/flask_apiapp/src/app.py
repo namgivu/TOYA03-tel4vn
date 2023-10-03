@@ -30,14 +30,19 @@ def          tag():
   url = f'https://api.github.com/repos/{owner_reponame}/tags'
 
   res = requests.get(url, headers=headers)
-  d   = res.json()
 
+  if res.status_code != 200:
+    return json.dumps({}), 404
+
+  d          = res.json()
   latest_tag = d[0]['name']
-  #endregion call github api /tags
 
   return json.dumps({
     'latest_tag': latest_tag,
   })
+  #endregion call github api /tags
+
+
 
 #endregion call github api to list tags
 
