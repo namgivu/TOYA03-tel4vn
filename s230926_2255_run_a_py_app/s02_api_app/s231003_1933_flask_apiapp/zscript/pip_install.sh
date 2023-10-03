@@ -10,6 +10,4 @@ python -m pip install --upgrade virtualenv
 python -m virtualenv .venv
 
 # install packages
-./.venv/bin/pip install Flask
-./.venv/bin/pip install requests
-./.venv/bin/pip install gunicorn
+./.venv/bin/pip install -r requirements.txt
