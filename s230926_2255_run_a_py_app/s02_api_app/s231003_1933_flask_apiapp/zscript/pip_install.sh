@@ -13,3 +13,6 @@ echo
 
 # install packages
 ./.venv/bin/pip install -r requirements.txt
+
+echo
+./.venv/bin/pip freeze | grep -E 'Flask|requests|gunicorn|python-dotenv'
