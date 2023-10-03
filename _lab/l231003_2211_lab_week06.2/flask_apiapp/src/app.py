@@ -27,8 +27,7 @@ def          tag():
     'Authorization': f'Bearer {GITHUB_API_KEY}',
   }
 
-  owner_reponame =  'pyenv/pyenv'  # Nam G VU 's favourite public github repo
-  url            = f'https://api.github.com/repos/{owner_reponame}/tags'
+  url = f'https://api.github.com/repos/{owner_reponame}/tags'
 
   res = requests.get(url, headers=headers)
   d   = res.json()
