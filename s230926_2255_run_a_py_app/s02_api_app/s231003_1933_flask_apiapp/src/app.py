@@ -33,6 +33,10 @@ def          demo_requests():
   return json.dumps(res.json())
 
 
+#TODO pip install all required packages in ONE CMD w/ requirements.txt
+#TODO call github api to list tags
+
+
 # w/ this below block, we could debug run flask apiapp w/ Pycharm
 if __name__ == '__main__':  #TODO explain later what is this line
   #  .run                                                  , debug=True to autoreload code wh changed
