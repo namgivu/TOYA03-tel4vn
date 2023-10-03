@@ -9,5 +9,7 @@ python -m pip install --upgrade pip
 python -m pip install --upgrade virtualenv
 python -m virtualenv .venv
 
+echo
+
 # install packages
 ./.venv/bin/pip install -r requirements.txt
