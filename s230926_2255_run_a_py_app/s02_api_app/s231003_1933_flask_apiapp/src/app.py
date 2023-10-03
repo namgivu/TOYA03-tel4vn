@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
@@ -24,6 +25,6 @@ def hi():
 
 
 if __name__ == '__main__':  #TODO explain later what is this line
-  app.run(host='0.0.0.0', port=3000)
-  #                       port=run w/ custom port
+  app.run(host='0.0.0.0', port=os.environ.get('PORT', 3000) )
+  #                       port=run w/ custom port     3000 default port if envvar PORT not avail.
   #       host  0 0 0 0 to accept request fr anywhere
