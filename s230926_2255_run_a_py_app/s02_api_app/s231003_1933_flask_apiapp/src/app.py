@@ -2,6 +2,9 @@ from flask import Flask
 import os
 import requests
 import json
+#
+from dotenv import load_dotenv  # pip install python-dotenv
+
 
 
 app = Flask(__name__)
@@ -33,7 +36,22 @@ def          demo_requests():
   return json.dumps(res.json())
 
 
-#TODO call github api to list tags
+#region call github api to list tags
+@app.route('/github/pyenv/tag')
+def          github_pyenv_tag():
+  load_dotenv()
+  GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')  # ref https://developers.google.com/maps/documentation/geocoding/get-api-key
+  headers = {
+    'Authorization': f'Bearer {GITHUB_API_KEY}',
+  }
+
+  owner_reponame =  'pyenv/pyenv'  # Nam G VU 's favourite public github repo
+  url            = f'https://api.github.com/repos/{owner_reponame}/tags'
+
+  res = requests.get(url, headers=headers)
+  return json.dumps(res.json())
+
+#endregion call github api to list tags
 
 
 # w/ this below block, we could debug run flask apiapp w/ Pycharm
