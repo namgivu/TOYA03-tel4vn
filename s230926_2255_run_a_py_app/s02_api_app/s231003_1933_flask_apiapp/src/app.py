@@ -33,7 +33,6 @@ def          demo_requests():
   return json.dumps(res.json())
 
 
-#TODO pip install all required packages in ONE CMD w/ requirements.txt
 #TODO call github api to list tags
 
 
