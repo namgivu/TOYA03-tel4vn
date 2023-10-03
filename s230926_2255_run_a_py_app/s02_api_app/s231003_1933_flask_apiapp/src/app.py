@@ -35,6 +35,7 @@ def          demo_requests():
 
 # w/ this below block, we could debug run flask apiapp w/ Pycharm
 if __name__ == '__main__':  #TODO explain later what is this line
-  app.run(host='0.0.0.0', port=os.environ.get('PORT', 3000) )  #TODO param to autoreload code wh changed
+  #  .run                                                  , debug=True to autoreload code wh changed
+  app.run(host='0.0.0.0', port=os.environ.get('PORT', 3000), debug=True)
   #                       port=run w/ custom port     3000 default port if envvar PORT not avail.
   #       host  0 0 0 0 to accept request fr anywhere
