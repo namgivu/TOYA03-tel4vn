@@ -20,6 +20,7 @@ curl localhost:5000/hi
 
 
 --- install requests package @ GET /demo_requests
+./.venv/bin/pip install requests
 ./.venv/bin/pip freeze
 
 --- install gunicorn package
