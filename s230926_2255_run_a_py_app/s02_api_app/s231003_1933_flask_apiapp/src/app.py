@@ -49,7 +49,10 @@ def          github_pyenv_tag():
   url            = f'https://api.github.com/repos/{owner_reponame}/tags'
 
   res = requests.get(url, headers=headers)
-  return json.dumps(res.json())
+  d   = res.json()
+  d   = [ tag_d['name'] for tag_d in d ]
+
+  return json.dumps(d)
 
 #endregion call github api to list tags
 
