@@ -3,7 +3,9 @@
 
 echo '--- before'; ./.venv/Scripts/pip freeze
 
-# install :requests
+./.venv/Scripts/python -m pip install --upgrade pip
+
+echo '::install :requests'
 ./.venv/Scripts/pip install requests
 
 echo '--- after' ; ./.venv/Scripts/pip freeze
