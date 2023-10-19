@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv  # pip install python-dotenv
 
 load_dotenv()
-GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')  # ref https://developers.google.com/maps/documentation/geocoding/get-api-key
+GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')  # ref https://github.com/settings/tokens
 #endregion load GITHUB_API_KEY
 
 
