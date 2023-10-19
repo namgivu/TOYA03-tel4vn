@@ -20,7 +20,7 @@ url = 'https://api.github.com/repos/pyenv/pyenv/tags'
 
 load_dotenv()
 GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
-header         = { 'Authorization': f'Bearer {GITHUB_API_KEY}' }
+header         = { 'Authorization': f'Bearer {GITHUB_API_KEY}' }  #TODO it seems github now allow to call /tags endpoint without a github api key
 res = requests.get(url, header)
 
 print(res.json())
