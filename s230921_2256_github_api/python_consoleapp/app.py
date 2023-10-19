@@ -23,4 +23,8 @@ GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
 header         = { 'Authorization': f'Bearer {GITHUB_API_KEY}' }  #TODO it seems github now allow to call /tags endpoint without a github api key
 res = requests.get(url, header)
 
-print(res.json())
+# print(res.json())
+
+d = res.json()
+latest_tag = d[0] ['name']
+print(f'{latest_tag=:>}')
