@@ -7,6 +7,8 @@ except: file_system = None
 
 import subprocess
 output = subprocess.run(f'df -h | grep -E "Size|{file_system}" ', capture_output=True, shell=True)
+#      =           .run                                         ,                    , shell=True to use pipe | in command
+
 print(f'{output.returncode=}')
 print('\noutput.stderr.decode()\n', output.stderr.decode())
 print('\noutput.stdout.decode()\n', output.stdout.decode())
