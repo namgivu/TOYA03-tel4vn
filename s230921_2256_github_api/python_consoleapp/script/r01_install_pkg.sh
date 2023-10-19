@@ -9,6 +9,6 @@ echo -e "\n--- before" ; ./.venv/bin/pip freeze
 # install :requests
 echo
 ./.venv/bin/python -m pip install --upgrade pip
-./.venv/bin/pip install requests
+./.venv/bin/pip install requests python-dotenv
 
 echo -e "\n--- after" ; ./.venv/bin/pip freeze

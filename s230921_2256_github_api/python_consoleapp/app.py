@@ -1,3 +1,6 @@
+import os
+from dotenv import load_dotenv  # pip install python-dotenv
+#
 import requests  # pip install requests <-- prepare .venv
 
 '''
@@ -15,7 +18,8 @@ https://api.github.com/repos/pyenv/pyenv/tags/
 url = 'https://api.github.com/repos/pyenv/pyenv/tags'
 
 
-GITHUB_API_KEY = 'yourapikey'
+load_dotenv()
+GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
 header         = { 'Authorization': f'Bearer {GITHUB_API_KEY}' }
 res = requests.get(url, header)
 
